@@ -8,13 +8,13 @@ const Navbar = () => {
         <Button variant="ghost" display={{ base: "block", md: "none" }} mr={4}>
           <Box as="span" fontSize="2xl">&#9776;</Box>
         </Button>
-        <Link as={RouterLink} to="/" fontSize="lg" fontWeight="bold" mr={4}>
+        <Link as={RouterLink} to="/" fontSize="md" fontWeight="bold" mr={4}>
           Home
         </Link>
-        <Link as={RouterLink} to="/about" fontSize="lg" fontWeight="bold" mr={4}>
+        <Link as={RouterLink} to="/about" fontSize="md" fontWeight="bold" mr={4}>
           About
         </Link>
-        <Link as={RouterLink} to="/contact" fontSize="lg" fontWeight="bold">
+        <Link as={RouterLink} to="/contact" fontSize="md" fontWeight="bold">
           Contact
         </Link>
         <Spacer />

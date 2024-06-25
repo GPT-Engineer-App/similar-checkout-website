@@ -16,14 +16,14 @@ const Sidebar = () => {
       <VStack align="start" spacing={4}>
         <Link as={RouterLink} to="/" display="flex" alignItems="center">
           <FaCreditCard />
-          <Text ml={2} fontSize="lg" fontWeight="bold">Transactions</Text>
+          <Text ml={2} fontSize="md" fontWeight="bold">Transactions</Text>
         </Link>
         <Divider />
         <Box width="100%">
           <Box display="flex" justifyContent="space-between" alignItems="center" onClick={toggleTerminalInfo} cursor="pointer">
             <Box display="flex" alignItems="center">
               <FaInfoCircle />
-              <Text ml={2} fontSize="lg" fontWeight="bold">Terminal Info</Text>
+              <Text ml={2} fontSize="md" fontWeight="bold">Terminal Info</Text>
             </Box>
             <IconButton
               icon={isTerminalInfoOpen ? <FaChevronUp /> : <FaChevronDown />}
@@ -44,7 +44,7 @@ const Sidebar = () => {
           <Box display="flex" justifyContent="space-between" alignItems="center" onClick={toggleTerminalManagement} cursor="pointer">
             <Box display="flex" alignItems="center">
               <FaTools />
-              <Text ml={2} fontSize="lg" fontWeight="bold">Terminal Management</Text>
+              <Text ml={2} fontSize="md" fontWeight="bold">Terminal Management</Text>
             </Box>
             <IconButton
               icon={isTerminalManagementOpen ? <FaChevronUp /> : <FaChevronDown />}
