@@ -11,13 +11,11 @@ const Navbar = () => {
       const bluetoothDevices = await navigator.bluetooth.requestDevice({
         acceptAllDevices: true,
       });
-      const usbDevices = await navigator.usb.requestDevice({
-        filters: [{}],
-      });
-      setDevices([bluetoothDevices, usbDevices]);
+      setDevices([bluetoothDevices]);
       onOpen();
     } catch (error) {
       console.error("Error scanning devices:", error);
+      alert("Failed to scan for Bluetooth devices. Please ensure Bluetooth is enabled and try again.");
     }
   };
 
