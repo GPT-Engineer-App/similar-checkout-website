@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Box, VStack, Link, Text, Divider, Collapse, IconButton } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
-import { FaCreditCard, FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaCreditCard, FaInfoCircle, FaTools, FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const Sidebar = () => {
   const [isTerminalInfoOpen, setTerminalInfoOpen] = useState(false);
@@ -12,16 +12,19 @@ const Sidebar = () => {
 
   return (
     <Box bg="gray.800" color="white" width="250px" p={4} height="100vh">
-      <Text fontSize="2xl" fontWeight="bold" mb={4}>Dspread Web Demo</Text>
+      <Text fontSize="3xl" fontWeight="bold" mb={4}>Dspread Web Demo</Text>
       <VStack align="start" spacing={4}>
         <Link as={RouterLink} to="/" display="flex" alignItems="center">
           <FaCreditCard />
-          <Text ml={2}>Transactions</Text>
+          <Text ml={2} fontSize="lg" fontWeight="bold">Transactions</Text>
         </Link>
         <Divider />
         <Box width="100%">
           <Box display="flex" justifyContent="space-between" alignItems="center" onClick={toggleTerminalInfo} cursor="pointer">
-            <Text fontSize="lg" fontWeight="bold">Terminal Info</Text>
+            <Box display="flex" alignItems="center">
+              <FaInfoCircle />
+              <Text ml={2} fontSize="lg" fontWeight="bold">Terminal Info</Text>
+            </Box>
             <IconButton
               icon={isTerminalInfoOpen ? <FaChevronUp /> : <FaChevronDown />}
               size="sm"
@@ -39,7 +42,10 @@ const Sidebar = () => {
         <Divider />
         <Box width="100%">
           <Box display="flex" justifyContent="space-between" alignItems="center" onClick={toggleTerminalManagement} cursor="pointer">
-            <Text fontSize="lg" fontWeight="bold">Terminal Management</Text>
+            <Box display="flex" alignItems="center">
+              <FaTools />
+              <Text ml={2} fontSize="lg" fontWeight="bold">Terminal Management</Text>
+            </Box>
             <IconButton
               icon={isTerminalManagementOpen ? <FaChevronUp /> : <FaChevronDown />}
               size="sm"
